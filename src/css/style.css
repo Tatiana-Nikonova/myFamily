@@ -75,23 +75,24 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   min-height: 100px;
   background-color: #4c8d72;
-  padding: 10px 10px 0 10px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-.header .nav {
+.nav {
+  padding: 15px 0;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.header .nav ul {
+.nav ul {
   display: flex;
 }
 
-.header .nav ul .nav__item {
+.nav ul .nav__item {
   position: relative;
   flex: 1 1 auto;
   margin: 0 5px 0 0;
@@ -100,29 +101,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {
-  .header .nav ul .nav__item {
+  .nav ul .nav__item {
     font-size: calc(14px + 17 * ((100vw - 320px) / 1280));
   }
 }
 
 @media (min-width: 767px) {
-  .header .nav ul .nav__item {
+  .nav ul .nav__item {
     font-size: calc(14px + 10 * (110vw / 1280));
   }
 }
 
-.header .nav ul .nav__item:nth-child(n + 4) {
+.nav ul .nav__item:nth-child(n + 4) {
   margin-right: 0;
 }
 
-.header .nav ul .nav__item:hover {
+.nav ul .nav__item:hover {
   border-radius: 7px;
   background-color: rgba(255, 255, 255, 0.4);
   text-shadow: 1px 1px 5px #000;
   transition: all 1s ease 0s;
 }
 
-.header .nav ul .nav__item .nav__link {
+.nav ul .nav__item .nav__link {
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -130,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
 }
 
-.header .nav ul .nav__item .nav__link::after {
+.nav ul .nav__item .nav__link::after {
   content: "";
   position: absolute;
   border-radius: 7px;
@@ -142,35 +143,35 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
 }
 
-.header .nav ul .nav__item2 {
+.nav ul .nav__item2 {
   border-radius: 50px;
   margin: 0 10px;
   flex: 0 1 200px;
 }
 
 @media (max-width: 767px) {
-  .header .nav ul .nav__item2 {
+  .nav ul .nav__item2 {
     font-size: calc(12px + 13.6 * ((100vw - 320px) / 1280));
   }
 }
 
 @media (min-width: 767px) {
-  .header .nav ul .nav__item2 {
+  .nav ul .nav__item2 {
     font-size: calc(12px + 8 * (110vw / 1280));
   }
 }
 
-.header .nav ul .nav__item2 .nav__link {
+.nav ul .nav__item2 .nav__link {
   color: #fdfdfd;
   padding: 10px 0;
 }
 
-.header .nav ul .nav__item2 .nav__link::after {
+.nav ul .nav__item2 .nav__link::after {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.header .nav ul .nav__item2:hover {
+.nav ul .nav__item2:hover {
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.9);
   text-shadow: 1px 1px 5px #fff;
@@ -258,6 +259,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 2s ease 0s;
 }
 
+.empty_ornament {
+  margin: 10px 0;
+  flex: 1 1 auto;
+  background: url("../images/optina-50.svg") 36% 0/contain no-repeat;
+}
+
 @font-face {
   font-family: 'TriodPostnaja';
   src: url("../Font/TriodPostnaja.woff2") format("woff2"), url("../Font/TriodPostnaja.woff") format("woff");
@@ -268,7 +275,6 @@ h1, h2, h3, h4, h5, h6 {
 .wrap {
   min-height: 100%;
   position: relative;
-  overflow: hidden;
   margin-bottom: 30px;
 }
 
@@ -284,6 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .memorial .memorial__title {
+  margin: 0 0 20px 0;
   word-spacing: 15px;
   position: relative;
   text-transform: uppercase;
@@ -342,6 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabs .tabs__items .tabs__item {
+  padding: 30px 0 0 0;
   flex: 0 1 50%;
   height: 50px;
   display: flex;
@@ -378,7 +386,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabs .tabs__block {
   position: relative;
-  display: none;
   padding: 20px;
 }
 
@@ -433,6 +440,30 @@ h1, h2, h3, h4, h5, h6 {
   .text p {
     font-size: calc(14px + 10 * (110vw / 1280));
   }
+}
+
+.tab__navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.tab {
+  cursor: pointer;
+}
+
+.tab_active {
+  color: blue;
+}
+
+.tab__content {
+  display: none;
+  padding: 20px;
+}
+
+.tab__content_active {
+  display: block;
 }
 
 html {
