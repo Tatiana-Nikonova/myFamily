@@ -1,0 +1,137 @@
+$maxWidth: 1280;
+@mixin adaptiveFont($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (110vw / #{$maxWidth}));
+	}
+}
+
+@font-face {
+	font-family: 'TriodPostnaja';
+	src: url('../Font/TriodPostnaja.woff2') format('woff2'), url('../Font/TriodPostnaja.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.wrap {	
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.content {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.memorial {
+	margin: 0 auto;
+	max-width: 1400px;
+	padding: 0 10px;		
+	
+	.memorial__title {
+		word-spacing: 15px;
+		position: relative;
+		text-transform: uppercase;
+		text-align: center;		
+		font-family: TriodPostnaja;
+		text-shadow: 1px 1px 5px rgb(252, 250, 250);
+		@include adaptiveFont(36, 18);
+		img { 
+			position: relative;
+			top: -7px;		
+			width: 4%;
+			height: 100%;	
+		}				
+	}
+
+	.memorial__colomns{		
+		@include adaptiveFont(24, 14);
+		a {
+			display: flex;			
+			align-items: flex-start;
+			padding-bottom: 10px;
+			height: 50px;
+			border-bottom: 1px dashed #fff;
+			color: #fff;
+		}		
+	}		
+}
+
+.tabs {
+	word-spacing: 15px;
+	.tabs__items {
+		overflow: hidden;
+		display: flex;
+		.tabs__item {
+			flex: 0 1 50%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-transform: uppercase;
+			color: #fff;
+			text-decoration: none;
+			span {				
+				display: inline-block;								
+				padding: 25px 0;
+				text-transform: uppercase;
+				color: rgb(19, 80, 59);
+				text-shadow: 1px 1px 5px #fff;
+				font-weight: 700;
+				font-family: TriodPostnaja;
+				@include adaptiveFont(28, 18);				
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+	.tabs__block {
+		position: relative;
+		display: none;
+		padding: 20px;
+		&::before {
+			content: "";
+			height: 50px;
+			width: 50%;
+			position: absolute;
+			top: -50px;
+		}
+		&:nth-child(1) {
+			background-color: rgba(95, 128, 78, 0.5);
+		}
+		&:nth-child(1)::before {
+			background-color: rgba(95, 128, 78, 0.5);
+			left: 0;
+		}		
+		
+		&:nth-child(2) {
+			background-color: rgba(91, 102, 84, 0.5);
+		}
+		&:nth-child(2)::before {
+			background-color: rgba(91, 102, 84, 0.5);
+			right: 0;
+		}
+	}
+	
+}
+.text {
+	margin-top: 20px;
+	p {		
+		font-size: 18px;
+		line-height: 24px;
+		padding: 10px;
+		font-family: TriodPostnaja;
+		line-height: 1.5;
+		text-indent: 50px;
+		word-spacing: 23px;
+		text-align: justify;
+		@include adaptiveFont(24, 14);
+	}	
+}
+
