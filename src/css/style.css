@@ -462,6 +462,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
+.tab__content span {
+  margin: 0 0 0 10px;
+  color: #83482d;
+}
+
+.tab__content span.data_death {
+  margin: 0 0 0 30px;
+  color: black;
+}
+
+.tab__content span.data_death::before {
+  content: "🕯";
+  width: 10px;
+  margin-right: 5px;
+}
+
 .tab__content_active {
   display: block;
 }
