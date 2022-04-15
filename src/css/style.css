@@ -270,6 +270,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .tree {
   width: 200px;
+  transition: all 1s ease 0s;
+}
+
+.tree:hover {
+  transform: scale(1.1);
+  transition: all 1s ease 0s;
 }
 
 .family_love {
@@ -279,6 +285,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .memorial {
   width: 200px;
+  position: relative;
+  top: 0;
+  transition: all 1s ease 0s;
+}
+
+.memorial:hover {
+  top: -20px;
+  transform: skewX(-4deg);
+  transition: all 1s ease 0s;
 }
 
 .golub {
@@ -288,6 +303,12 @@ h1, h2, h3, h4, h5, h6 {
 .placard {
   width: 100px;
   align-self: center;
+  transition: all 1s ease 0s;
+}
+
+.placard:hover {
+  transform: scale(1.1);
+  transition: all 1s ease 0s;
 }
 
 @font-face {
@@ -566,6 +587,58 @@ body {
 .main {
   background-color: rgba(0, 0, 0, 0.5);
   flex: 1 1 auto;
+}
+
+/* фотоальбом */
+.foto {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px #000;
+  position: relative;
+  z-index: 3;
+}
+
+.foto .layer img {
+  width: 100%;
+}
+
+/* фотоальбом конец*/
+.formSingIn {
+  display: flex;
+  background: rgba(102, 153, 153, 0.8);
+  padding: 3px 10px;
+  box-shadow: 1px 1px 5px #000;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  input[type="text"], input[type="password"], input[type="submit"] {
+    font-size: calc(12px + 3.4 * ((100vw - 320px) / 1280));
+  }
+}
+
+@media (min-width: 767px) {
+  input[type="text"], input[type="password"], input[type="submit"] {
+    font-size: calc(12px + 2 * (110vw / 1280));
+  }
+}
+
+input[type="text"] {
+  width: 120px;
+}
+
+input[type="password"] {
+  width: 70px;
+}
+
+input[type="text"], input[type="password"], input[type="submit"]:hover {
+  transition: 0.3s;
 }
 
 .footer {

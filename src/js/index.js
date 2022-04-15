@@ -1,13 +1,17 @@
 // Фон небо скрипт
 function myFunction() {
 	if (video.paused) {
-		 video.play();
-		 btn.innerHTML = "Pause";
+		video.play();
+		btn.innerHTML = "Pause";
 	} else {
-		 video.pause();
-		 btn.innerHTML = "Play";
+		video.pause();
+		btn.innerHTML = "Play";
 	}
 }
+
+// Фотоальбом-паралакс
+let scene = document.getElementById('scene');
+let parallaxInstance = new Parallax(scene);
 
 // черновик
 class Person {
@@ -15,12 +19,12 @@ class Person {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.gender = gender;
-		this.live = true;	
+		this.live = true;
 		this.dead = dead;
-		this.fullAge = fullAge;		
+		this.fullAge = fullAge;
 	}
 
-	
+
 	set fullAge(year) {
 		const date = new Date();
 		this.birthday = year;
@@ -29,11 +33,11 @@ class Person {
 			this.age = this.dead - year;
 		} else {
 			this.age = date.getFullYear() - year;
-			
+
 		}
 	}
 
-	
+
 }
 
 

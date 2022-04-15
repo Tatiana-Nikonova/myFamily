@@ -11,22 +11,22 @@
 	<script>
 		// Фон небо скрипт
 		function myFunction() {
-			 if (video.paused) {
-				  video.play();
-				  btn.innerHTML = "Pause";
-			 } else {
-				  video.pause();
-				  btn.innerHTML = "Play";
-			 }
+			if (video.paused) {
+				video.play();
+				btn.innerHTML = "Pause";
+			} else {
+				video.pause();
+				btn.innerHTML = "Play";
+			}
 		}
-		</script>
+	</script>
 </head>
 
 <body>
 	<!-- фон  небо-->
 	<video autoplay muted loop id="myVideo">
 		<source src="video/сlouds.mp4" type="video/mp4">
-	 </video>	
+	</video>
 	<!-- фон  небо конец-->
 
 	<div class="wrapper">
@@ -40,25 +40,28 @@
 				</div>
 
 				<nav class="nav">
-					
+
 					<ul>
 						<li>
 							<a href="#0" class="nav__link"><img src="images/tree.png" class="nav__images  tree" alt=""></a>
 						</li>
-						
+
 						<li>
-							<a href="#0" class="nav__link"><img src="images/family_love.png" class="nav__images  family_love" alt=""></a>
+							<a href="#0" class="nav__link"><img src="images/family_love.png" class="nav__images  family_love"
+									alt=""></a>
 						</li>
 						<li>
 							<a href="#0" class="nav__link"><img src="images/golub.png" class="nav__images golub" alt=""></a>
 						</li>
 						<li>
-							<a href="memorial.html" class="nav__link"><img src="images/memorial.png" class="nav__images memorial" alt=""></a>
-						</li>						
-						<li class="placard">
-							<a href="#0" class="nav__link"><img src="images/placard.png" class="nav__images  placard" alt=""></a>
+							<a href="memorial.html" class="nav__link"><img src="images/memorial.png"
+									class="nav__images memorial" alt=""></a>
 						</li>
-						
+						<li class="placard">
+							<a href="#0" class="nav__link"><img src="images/placard.png" class="nav__images  placard"
+									alt=""></a>
+						</li>
+
 					</ul>
 				</nav>
 			</div>
@@ -69,10 +72,31 @@
 		</header>
 
 		<main class="main">
+			<div class="formSingIn">
+				<form action="" method="post">
+					<input type="text" name="name" placeholder="Имя и фамилия">
+					<input type="password" name="pass" placeholder="Пароль">
+					<input class="but" type="submit" name="submit" value="ВОЙТИ">
+					<a href="">Восстановить пароль</a>
+				</form>
+			</div>
+
+
+			<a href="" title="Фотоальбом" alt="Фотоальбом">
+				<div class="foto">
+					<ul id="scene">
+						<li class="layer" data-depth="0.03"><img src="images/slider/000.png"></li>
+						<li class="layer" data-depth="0.06"><img src="images/slider/001.png"></li>
+						<li class="layer" data-depth="0.09"><img src="images/slider/002.png"></li>
+						<li class="layer" data-depth="0.15"><img src="images/slider/003.png"></li>
+						<li class="layer" data-depth="0.20"><img src="images/slider/004.png"></li>
+						<li class="layer" data-depth="0.40"><img src="images/slider/005.png"></li>
+					</ul>
+				</div>
+			</a>
 
 
 
-			<h1>Привет</h1>
 		</main>
 		<footer class="footer">
 			<div class="contact">
@@ -80,6 +104,10 @@
 			</div>
 		</footer>
 	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script src="path/to/parallax.js"></script>
+	<script src="parallax.min.js"></script>
 
 	<script src='js/index.js'></script>
 </body>

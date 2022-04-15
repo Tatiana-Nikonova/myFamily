@@ -167,6 +167,11 @@ $maxWidth: 1280;
 
 .tree {
 	width: 200px;
+	transition: all 1s ease 0s;
+	&:hover {
+		transform: scale(1.1);
+		transition: all 1s ease 0s;
+	}
 }
 
 .family_love {
@@ -175,6 +180,15 @@ $maxWidth: 1280;
 }
 .memorial {
 	width: 200px;
+	position: relative;
+	top: 0;
+	transition: all 1s ease 0s;
+	&:hover {
+		top: -20px;
+		transform: skewX(-4deg);
+		transition: all 1s ease 0s;
+	}
+	
 }
 .golub {
 	align-self: center;
@@ -182,6 +196,11 @@ $maxWidth: 1280;
 .placard {
 	width: 100px;
 	align-self: center;
+	transition: all 1s ease 0s;
+	&:hover {
+		transform: scale(1.1);
+		transition: all 1s ease 0s;
+	}
 	
 }
 
