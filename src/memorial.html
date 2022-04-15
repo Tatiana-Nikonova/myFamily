@@ -11,41 +11,62 @@
 </head>
 
 <body>
+	<!-- фон  небо-->
+	<video autoplay muted loop id="myVideo">
+		<source src="video/сlouds.mp4" type="video/mp4">
+	 </video>
+	<!-- фон  небо конец-->
 	<div class="wrapper">
 		<header class="header">
-			<div class="logo">
-				<a href="index.html" class="empty-block">
-					<h1>Никоновы</h1>
-				</a>
-				<div><img class="image__logo" src="images/logo8.png" alt="логотип Семья"></div>
-			</div>
-			<nav class="nav">
-				<ul>
-					<li class="nav__item"><a href="#" class="nav__link fa-brands fa-pagelines">Древо</a></li>
-					<li class="nav__item"><a href="#" class="nav__link fa-solid fa-address-card">Персональные карточки</a>
-					</li>
-					<li class="nav__item"><a href="#" class="nav__link fa-solid fa-camera-retro">Фотоальбом</a></li>
-					<li class="nav__item"><a href="#0" class="nav__link fa-solid fa-book-bible">Помяник</a>
-					</li>
-				</ul>
-				<div class="empty_ornament">					
+			<div class="header_container">
+				<div class="logo">
+					<a href="index.html" class="empty-block">
+						<h1>Никоновы</h1>
+					</a>
+					<div><img class="image__logo" src="images/logo8.png" alt="логотип Семья"></div>
 				</div>
-			</nav>
+
+				<nav class="nav">
+					
+					<ul>
+						<li>
+							<a href="#0" class="nav__link"><img src="images/tree.png" class="nav__images  tree" alt=""></a>
+						</li>
+						
+						<li>
+							<a href="#0" class="nav__link"><img src="images/family_love.png" class="nav__images  family_love" alt=""></a>
+						</li>
+						<li>
+							<a href="#0" class="nav__link"><img src="images/golub.png" class="nav__images golub" alt=""></a>
+						</li>
+						<li>
+							<a href="memorial.html" class="nav__link"><img src="images/memorial.png" class="nav__images memorial" alt=""></a>
+						</li>						
+						<li class="placard">
+							<a href="#0" class="nav__link"><img src="images/placard.png" class="nav__images  placard" alt=""></a>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+
+
+
 
 		</header>
 
 		<main class="main">
 
-			<section class="memorial" id="tabs">
+			<section class="memorial-book" id="tabs">
 				<h2 class="memorial__title"><img src="images/free-icon-cross-4794098.png">Помяник</h2>
 				<nav class="nav tabs-nav" id="tabs">
 					<ul>
-						<li class="nav__item nav__item2"><a href="#tab-1" class="nav__link tabs-target">Родственники</a></li>
-						<li class="nav__item nav__item2"><a href="#tab-2" class="nav__link tabs-target">Духовные</a></li>
-						<li class="nav__item nav__item2"><a href="#tab-3" class="nav__link tabs-target">Наставники</a>
+						<li class="nav__item"><a href="#tab-1" class="nav__link tabs-target">Родственники</a></li>
+						<li class="nav__item"><a href="#tab-2" class="nav__link tabs-target">Духовные</a></li>
+						<li class="nav__item"><a href="#tab-3" class="nav__link tabs-target">Наставники</a>
 						</li>
-						<li class="nav__item nav__item2"><a href="#tab-4" class="nav__link tabs-target">Друзья</a></li>
-						<li class="nav__item nav__item2"><a href="#tab-5" class="nav__link tabs-target">Знакомые</a>
+						<li class="nav__item"><a href="#tab-4" class="nav__link tabs-target">Друзья</a></li>
+						<li class="nav__item"><a href="#tab-5" class="nav__link tabs-target">Знакомые</a>
 						</li>
 					</ul>
 
@@ -85,6 +106,7 @@
 
 									<div id="tab_02" class="memorial__deadPerson tabs__block tab__content">
 
+										<a href=""><img src="images/foto/ikona ubiennyh mladencev.jpg" class="foto_person">мл. Александр(а)<span></span><span class="data_death"></span></a>
 										<a href=""><img src="images/foto/Pushchakov Vasilij.jpg" class="foto_person">Пущеков Василий Андреевич<span>19.08.1929</span><span class="data_death">27.08.2003</span></a>
 										<a href=""><img src="images/foto/Pushchakova Lidia.jpg" class="foto_person">Пущекова (Амброжко) Лидия Павловна<span>09.03.1930</span><span class="data_death">01.03.2001</span></a>
 										<a href=""><img src="images/foto/Pushchakov Andrei.jpg" class="foto_person">Пущаков Андрей Васильевич<span></span><span class="data_death">10.04.2020</span></a>

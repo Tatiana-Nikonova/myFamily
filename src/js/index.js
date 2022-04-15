@@ -1,3 +1,15 @@
+// Фон небо скрипт
+function myFunction() {
+	if (video.paused) {
+		 video.play();
+		 btn.innerHTML = "Pause";
+	} else {
+		 video.pause();
+		 btn.innerHTML = "Play";
+	}
+}
+
+// черновик
 class Person {
 	constructor(firstName, lastName, gender, fullAge, dead = '') {
 		this.firstName = firstName;
